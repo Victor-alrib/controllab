@@ -1,0 +1,36 @@
+============================= test session starts ==============================
+platform linux -- Python 3.13.18, pytest-9.1.1, pluggy-1.6.0 -- python3
+cachedir: .pytest_cache
+rootdir: controllab/backend
+configfile: pytest.ini
+testpaths: tests
+plugins: platformdirs-4.13.3, anyio-4.15.1
+collecting ... collected 25 items
+
+tests/test_api.py::test_catalog PASSED                                   [  4%]
+tests/test_api.py::test_simulate_analyze_csv_report PASSED               [  8%]
+tests/test_api.py::test_unstable_run_is_json_safe PASSED                 [ 12%]
+tests/test_api.py::test_validation_error_message PASSED                  [ 16%]
+tests/test_fidelity.py::test_first_order_open_loop_exact PASSED          [ 20%]
+tests/test_fidelity.py::test_first_order_initial_condition_free_response PASSED [ 24%]
+tests/test_fidelity.py::test_second_order_step_and_overshoot[0.1] PASSED [ 28%]
+tests/test_fidelity.py::test_second_order_step_and_overshoot[0.5] PASSED [ 32%]
+tests/test_fidelity.py::test_second_order_step_and_overshoot[0.9] PASSED [ 36%]
+tests/test_fidelity.py::test_second_order_initial_conditions PASSED      [ 40%]
+tests/test_fidelity.py::test_tf_and_ss_agree_with_python_control PASSED  [ 44%]
+tests/test_fidelity.py::test_delay_is_exact_shift PASSED                 [ 48%]
+tests/test_fidelity.py::test_p_control_steady_state_error PASSED         [ 52%]
+tests/test_fidelity.py::test_pi_zero_steady_state_error_with_input_disturbance PASSED [ 56%]
+tests/test_fidelity.py::test_simulated_loop_matches_exact_discrete_closed_loop[forward] PASSED [ 60%]
+tests/test_fidelity.py::test_simulated_loop_matches_exact_discrete_closed_loop[backward] PASSED [ 64%]
+tests/test_fidelity.py::test_simulated_loop_matches_exact_discrete_closed_loop[tustin] PASSED [ 68%]
+tests/test_fidelity.py::test_analysis_poles_consistent_with_stability PASSED [ 72%]
+tests/test_fidelity.py::test_margins_first_order_with_delay PASSED       [ 76%]
+tests/test_fidelity.py::test_saturation_and_antiwindup_reduce_overshoot PASSED [ 80%]
+tests/test_fidelity.py::test_integral_metrics_first_order PASSED         [ 84%]
+tests/test_fidelity.py::test_first_order_rise_and_settling PASSED        [ 88%]
+tests/test_fidelity.py::test_not_settled_is_flagged PASSED               [ 92%]
+tests/test_fidelity.py::test_invalid_inputs PASSED                       [ 96%]
+tests/test_fidelity.py::test_step_metrics_window_excludes_later_disturbance PASSED [100%]
+
+============================== 25 passed in 5.51s ==============================
